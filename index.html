@@ -1,11 +1,18 @@
 <!DOCTYPE html>
-<html lang="en">
-<body>
-</body>
-<script src="./node_modules/react/umd/react.development.js"></script>
-<script src="./node_modules/react-dom/umd/react-dom.development.js"></script>
-<script>
-    
-</script>
-
+<html>
+    <body>
+        <div id="root"></div>
+    </body>
+    <script src="./node_modules/react/umd/react.development.js"></script>
+    <script src="./node_modules/react-dom/umd/react-dom.development.js"></script>
+    <script>
+        const root = document.getElementById("root");
+        const span = React.createElement("span",
+            {
+                id:"span-id", style:{color:"blue"}
+            },
+            "Hello span"
+        );
+        ReactDOM.render(span, root);
+    </script>
 </html>
